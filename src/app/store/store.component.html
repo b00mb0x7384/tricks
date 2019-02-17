@@ -13,7 +13,9 @@
 <div class="col-xs-9 p-a-1">
   <div *ngFor="let product of products" class="card card-outline-primary">
     <h4 class="card-header">
-      {{product.name}} {{product.id}}
+      {{product.name}}
+      <!-- {{product.id}} -->
+      <!-- uncomment line above to show product id's next to names (useful for debugging) -->
       <span class="pull-xs-right tag tag-pill tag-primary">
         {{ product.price | currency:"USD":true:"2.2-2" }}
       </span>
