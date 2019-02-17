@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+html body {
+  background-color: rgba(0, 0, 0, 1.00);
+  color: silver;
+}
+
+/* struggling  to get this color to change for background, styling will be my absoulte focus next sprint */
+
+.card-header {
+  background-color: blue;
+  color: red;
+}

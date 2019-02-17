@@ -13,7 +13,7 @@
 <div class="col-xs-9 p-a-1">
   <div *ngFor="let product of products" class="card card-outline-primary">
     <h4 class="card-header">
-      {{product.name}}
+      {{product.name}} {{product.id}}
       <span class="pull-xs-right tag tag-pill tag-primary">
         {{ product.price | currency:"USD":true:"2.2-2" }}
       </span>
@@ -21,7 +21,11 @@
     <div class="card-text p-a-1">{{product.description}}
     </div>
     <div>
-      <img src="../../assets/{{product.id}}.png" alt="picture of {{product.name}}" />
+      <!-- for some reason the thumbnail classis not working here browser is complainign about MIME and boostraphas already been defined in 
+      angular.json -->
+      <img src="../../assets/{{product.id}}.png" class="img-thumbnail" alt="picture of {{product.name}}" />
+      <!-- placeholder images need to photoshop some or change the name of the items in the dataset to reflect the true
+      brands this iwill be addressed next sprint. -->
     </div>
   </div>
   <div class="form-inline pull-xs-left m-r-1">
