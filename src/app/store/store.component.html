@@ -18,6 +18,9 @@
       <!-- uncomment line above to show product id's next to names (useful for debugging) -->
       <span class="pull-xs-right tag tag-pill tag-primary">
         {{ product.price | currency:"USD":true:"2.2-2" }}
+        <button class="btn btn-success btn-sm pull-xs-right" (click)="addProductToCart(product)">
+          Add To Cart
+        </button>
       </span>
     </h4>
     <div class="card-text p-a-1">{{product.description}}
