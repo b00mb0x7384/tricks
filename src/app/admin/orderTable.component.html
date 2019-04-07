@@ -17,7 +17,7 @@
     <tr *ngIf="getOrders().length == 0">
       <td colspan="5">There are no orders</td>
     </tr>
-    <template ngFor let o [ngForOf]="getOrders()">
+    <div *ngFor="let o of getOrders()">
       <tr>
         <td>{{o.name}}</td>
         <td>{{o.zip}}</td>
@@ -37,6 +37,6 @@
         <td>{{line.product.name}}</td>
         <td>{{line.quantity}}</td>
       </tr>
-    </template>
+    </div>
   </tbody>
 </table>
