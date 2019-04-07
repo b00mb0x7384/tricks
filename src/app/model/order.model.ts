@@ -5,6 +5,20 @@ export class Order {
    public id: number;
    public firstName: string;
    public lastName: string;
+   public billing: {
+      address: string,
+      city: string,
+      state: string,
+      zip: string,
+      country: string,
+   }
+   public mailing: {
+      address: string,
+      city: string,
+      state: string,
+      zip: string,
+      country: string,
+   }
    public address: string;
    public city: string;
    public state: string;
@@ -15,6 +29,7 @@ export class Order {
    constructor(public cart: Cart) { }
 
    clear() {
+      //need to refactor this below at a later time to erase everything
       this.id = null;
       this.firstName = this.address = this.city = null;
       this.lastName = this.address = this.city = null;
